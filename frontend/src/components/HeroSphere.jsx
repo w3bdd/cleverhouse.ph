@@ -1,17 +1,18 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+import { LAND_POINTS, PH_POINTS } from "../data/globePoints";
 
 const R = 1.7;
 const PH = { lat: 15.8, lon: 121.6 };
 
-const latLonToVec = (lat, lon) => {
+const latLonToVec = (lat, lon, r = R) => {
   const la = (lat * Math.PI) / 180;
   const lo = (lon * Math.PI) / 180;
   return new THREE.Vector3(
-    R * Math.cos(la) * Math.cos(lo),
-    R * Math.sin(la),
-    -R * Math.cos(la) * Math.sin(lo)
+    r * Math.cos(la) * Math.cos(lo),
+    r * Math.sin(la),
+    -r * Math.cos(la) * Math.sin(lo)
   );
 };
 
@@ -19,9 +20,10 @@ const NodeSphere = ({ color }) => {
   const group = useRef();
   const markerGroup = useRef();
   const markerRing = useRef();
+  const phMat = useRef();
   const mouse = useRef({ x: 0, y: 0 });
 
-  const { grid, dots, markerPos, baseRot } = useMemo(() => {
+  const { grid, land, ph, markerPos, baseRot } = useMemo(() => {
     const SEG = 72;
     const lines = [];
     for (let lat = -75; lat <= 75; lat += 15) {
@@ -36,17 +38,27 @@ const NodeSphere = ({ color }) => {
       for (let i = 0; i < SEG; i++)
         lines.push(pts[i].x, pts[i].y, pts[i].z, pts[i + 1].x, pts[i + 1].y, pts[i + 1].z);
     }
-    const dotVerts = [];
-    for (let lat = -75; lat <= 75; lat += 15) {
-      for (let lon = 0; lon < 360; lon += 15) {
-        const v = latLonToVec(lat, lon);
-        dotVerts.push(v.x, v.y, v.z);
-      }
+    const landVerts = new Float32Array((LAND_POINTS.length / 2) * 3);
+    for (let i = 0; i < LAND_POINTS.length; i += 2) {
+      const v = latLonToVec(LAND_POINTS[i], LAND_POINTS[i + 1]);
+      const o = (i / 2) * 3;
+      landVerts[o] = v.x;
+      landVerts[o + 1] = v.y;
+      landVerts[o + 2] = v.z;
+    }
+    const phVerts = new Float32Array((PH_POINTS.length / 2) * 3);
+    for (let i = 0; i < PH_POINTS.length; i += 2) {
+      const v = latLonToVec(PH_POINTS[i], PH_POINTS[i + 1], R + 0.012);
+      const o = (i / 2) * 3;
+      phVerts[o] = v.x;
+      phVerts[o + 1] = v.y;
+      phVerts[o + 2] = v.z;
     }
     const m = latLonToVec(PH.lat, PH.lon);
     return {
       grid: new Float32Array(lines),
-      dots: new Float32Array(dotVerts),
+      land: landVerts,
+      ph: phVerts,
       markerPos: m,
       baseRot: Math.atan2(-m.x, m.z),
     };
@@ -70,6 +82,9 @@ const NodeSphere = ({ color }) => {
     group.current.rotation.y = baseRot + Math.sin(t * 0.1) * 0.42;
     group.current.rotation.x = THREE.MathUtils.lerp(group.current.rotation.x, 0.32 + mouse.current.y * 0.12, 0.04);
     group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, mouse.current.x * 0.06, 0.04);
+    if (phMat.current) {
+      phMat.current.opacity = 0.75 + ((Math.sin(t * 2) + 1) / 2) * 0.25;
+    }
     if (markerRing.current) {
       const s = 1 + ((Math.sin(t * 2.4) + 1) / 2) * 0.8;
       markerRing.current.scale.setScalar(s);
@@ -83,13 +98,19 @@ const NodeSphere = ({ color }) => {
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[grid, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color={color} transparent opacity={0.2} />
+        <lineBasicMaterial color={color} transparent opacity={0.08} />
       </lineSegments>
       <points>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" args={[dots, 3]} />
+          <bufferAttribute attach="attributes-position" args={[land, 3]} />
         </bufferGeometry>
-        <pointsMaterial size={0.028} color={color} transparent opacity={0.75} sizeAttenuation />
+        <pointsMaterial size={0.022} color={color} transparent opacity={0.55} sizeAttenuation />
+      </points>
+      <points>
+        <bufferGeometry>
+          <bufferAttribute attach="attributes-position" args={[ph, 3]} />
+        </bufferGeometry>
+        <pointsMaterial ref={phMat} size={0.036} color="#FBBF24" transparent opacity={0.9} sizeAttenuation />
       </points>
       <group ref={markerGroup} position={markerPos}>
         <mesh>
