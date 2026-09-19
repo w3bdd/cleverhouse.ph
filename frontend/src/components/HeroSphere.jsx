@@ -18,8 +18,6 @@ const latLonToVec = (lat, lon, r = R) => {
 
 const NodeSphere = ({ color }) => {
   const group = useRef();
-  const markerGroup = useRef();
-  const markerRing = useRef();
   const phMat = useRef();
   const mouse = useRef({ x: 0, y: 0 });
 
@@ -65,9 +63,6 @@ const NodeSphere = ({ color }) => {
   }, []);
 
   useEffect(() => {
-    if (markerGroup.current) {
-      markerGroup.current.lookAt(markerPos.clone().multiplyScalar(2));
-    }
     const onMove = (e) => {
       mouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
       mouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
@@ -84,11 +79,6 @@ const NodeSphere = ({ color }) => {
     group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, mouse.current.x * 0.06, 0.04);
     if (phMat.current) {
       phMat.current.opacity = 0.75 + ((Math.sin(t * 2) + 1) / 2) * 0.25;
-    }
-    if (markerRing.current) {
-      const s = 1 + ((Math.sin(t * 2.4) + 1) / 2) * 0.8;
-      markerRing.current.scale.setScalar(s);
-      markerRing.current.material.opacity = 0.9 - (s - 1) * 0.7;
     }
   });
 
@@ -112,16 +102,6 @@ const NodeSphere = ({ color }) => {
         </bufferGeometry>
         <pointsMaterial ref={phMat} size={0.036} color="#FBBF24" transparent opacity={0.9} sizeAttenuation />
       </points>
-      <group ref={markerGroup} position={markerPos}>
-        <mesh>
-          <sphereGeometry args={[0.05, 16, 16]} />
-          <meshBasicMaterial color="#FBBF24" />
-        </mesh>
-        <mesh ref={markerRing}>
-          <torusGeometry args={[0.1, 0.006, 8, 48]} />
-          <meshBasicMaterial color="#FBBF24" transparent opacity={0.8} />
-        </mesh>
-      </group>
     </group>
   );
 };
