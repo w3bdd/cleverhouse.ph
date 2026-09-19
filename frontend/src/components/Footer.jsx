@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, User } from "lucide-react";
 import { CONTACT, SERVICES } from "../data/content";
 
 export const Footer = () => (
@@ -61,6 +61,9 @@ export const Footer = () => (
             </a>
             <p className="flex items-center gap-3 text-sm text-muted-foreground">
               <MapPin size={15} className="text-primary" /> {CONTACT.address}
+            </p>
+            <p className="flex items-center gap-3 text-sm text-muted-foreground" data-testid="footer-contact-person">
+              <User size={15} className="text-primary" /> {CONTACT.person}
             </p>
           </div>
           <div className="mt-6 flex gap-6">

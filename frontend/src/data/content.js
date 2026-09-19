@@ -14,6 +14,7 @@ export const CONTACT = {
   emailHref: "mailto:contact.us@chphil.com",
   address: "San Luis, Aurora 3201, Philippines",
   region: "Aurora & Region 3, Central Luzon",
+  person: "Alexander Galvan",
 };
 
 export const IMAGES = {

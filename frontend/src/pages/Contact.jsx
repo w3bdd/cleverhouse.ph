@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, User, ArrowUpRight } from "lucide-react";
 import { MaskedLines } from "../components/MaskedLines";
 import { Reveal } from "../components/Reveal";
 import { CONTACT, MUNICIPALITIES } from "../data/content";
@@ -48,6 +48,10 @@ const Contact = () => {
                 <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
                   <Clock size={14} className="text-primary" />
                   Daily — we respond within one business day
+                </p>
+                <p className="mt-2.5 flex items-center gap-2 text-sm text-muted-foreground" data-testid="contact-person-line">
+                  <User size={14} className="text-primary" />
+                  Contact person — <span className="font-semibold text-foreground">Alexander Galvan</span>
                 </p>
               </div>
             </a>
