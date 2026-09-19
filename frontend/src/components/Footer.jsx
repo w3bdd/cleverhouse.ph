@@ -60,7 +60,7 @@ export const Footer = () => (
               <Mail size={15} className="text-primary" /> {CONTACT.email}
             </a>
             <p className="flex items-center gap-3 text-sm text-muted-foreground">
-              <MapPin size={15} className="text-primary" /> {CONTACT.region}
+              <MapPin size={15} className="text-primary" /> {CONTACT.address}
             </p>
           </div>
           <div className="mt-6 flex gap-6">

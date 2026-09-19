@@ -217,7 +217,7 @@ async def create_inquiry(payload: InquiryCreate):
         '<p style="font-size:14px;line-height:1.6">We received your consultation request. '
         'A member of the Cleverhouse Philippines team will reach out within one business day.</p>'
         '<p style="font-size:14px;line-height:1.6">Prefer to talk now? Call us at '
-        '<a href="tel:+639650933555">+63 965 093 3555</a> or reply to this email.</p>'
+        '<a href="tel:+639917242377">+63 991 724 2377</a> or reply to this email.</p>'
         f'<p style="font-size:12px;color:#94A3B8;margin-top:20px">{escape(EMAIL_FROM_NAME)} — Aurora &amp; Region 3. We never ask for passwords or payment details by email.</p>'
         '</td></tr></table>'
     )

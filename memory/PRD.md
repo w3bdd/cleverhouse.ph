@@ -23,11 +23,16 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 - Light default + dark toggle
 
 ## Implemented (2026-07-19)
-- 6 pages: Home (kinetic 3D hero, marquee, services index, coverage, process, why-us, gallery teaser, CTA band), About (mission/vision, 3 numbered manifesto chapters, honesty note), Services (6 alternating blocks with clipped-frame imagery), Gallery (6 labelled placeholders), Contact (big click-to-call card, email, service area), Consultation (form: name/email/phone + optional service/message, honeypot)
-- Sticky mobile call bar (+63 965 093 3555), navbar with theme toggle, footer with provisional standards note
+- 6 pages: Home (kinetic 3D hero, marquee, services index, coverage, process, why-us, gallery teaser, CTA band), About (mission/vision, 3 numbered manifesto chapters, honesty note), Services (6 alternating blocks with clipped-frame imagery), Gallery (6 labelled placeholders), Contact (big click-to-call card, email, address), Consultation (form: name/email/phone + optional service/message, honeypot)
+- Sticky mobile call bar, navbar with theme toggle, footer with provisional standards note
 - SEO meta in index.html (Aurora/Region 3 keywords, OG tags), per-page document.title
 - Backend inquiry endpoint + Resend email notifications (owner + auto-confirmation) — verified end-to-end
 - Anti-spam honeypot + phone/email validation — verified (400/422 paths)
+
+## Revisions (2026-07-19, v2 — official company write-up integrated)
+- Contact details updated: phone +63 991 724 2377, address San Luis, Aurora 3201, Philippines (site-wide + confirmation email template)
+- Tagline "Empowering Smart Living Through Innovative Solutions" now drives the About hero
+- Services descriptions, Why-Choose-Us points, About story, Mission and Vision replaced with improved versions of the official company copy
 
 ## Backlog
 - P0: Replace gallery placeholders with real project photos; verify provisional safety/warranty copy against actual business terms

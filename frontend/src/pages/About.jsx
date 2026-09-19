@@ -15,17 +15,18 @@ const About = () => {
       <section className="mx-auto max-w-7xl px-5 sm:px-8">
         <p className="font-mono text-[10px] sm:text-xs tracking-[0.35em] uppercase text-primary">About us</p>
         <MaskedLines
-          lines={["Technology, installed", "with a conscience."]}
+          lines={["Empowering smart living", "through innovation."]}
           delay={0.15}
           className="mt-6"
           lineClassName="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-balance"
         />
         <Reveal delay={0.5}>
           <p className="mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground">
-            Cleverhouse Philippines started with a simple observation: homes and businesses in Aurora deserve the same
-            calibre of smart technology and electrical workmanship as Metro Manila — without the wait, the markup, or
-            the guesswork. We design, install, and support smart home, security, solar, automation, and electrical
-            systems across Aurora and Region 3.
+            Cleverhouse Philippines provides cutting-edge home automation and security systems — a comprehensive
+            suite of services that elevates residential and commercial spaces into smarter, safer, and more
+            efficient environments. From our home base in San Luis, Aurora, we specialize in the installation and
+            integration of modern technologies, creating interconnected living and working spaces across Aurora and
+            the wider Region 3.
           </p>
         </Reveal>
       </section>
@@ -37,8 +38,9 @@ const About = () => {
             <div data-testid="mission-card" className="h-full border border-border rounded-2xl p-8 sm:p-10 bg-secondary/30">
               <p className="font-mono text-[10px] tracking-[0.35em] uppercase text-primary">Mission</p>
               <p className="mt-5 font-display text-xl sm:text-2xl font-bold tracking-tight leading-snug">
-                To make smart, secure, energy-efficient living practical for every home and business in Aurora and
-                Region 3 — installed properly, supported locally.
+                To enhance the safety, comfort, and efficiency of homes and businesses through advanced automation
+                and security solutions — innovative, customized smart technology that integrates seamlessly into
+                daily life, bringing convenience, energy efficiency, and peace of mind.
               </p>
             </div>
           </Reveal>
@@ -46,7 +48,9 @@ const About = () => {
             <div data-testid="vision-card" className="h-full border border-border rounded-2xl p-8 sm:p-10 bg-secondary/30">
               <p className="font-mono text-[10px] tracking-[0.35em] uppercase text-primary">Vision</p>
               <p className="mt-5 font-display text-xl sm:text-2xl font-bold tracking-tight leading-snug">
-                A Region 3 where every building is safe, efficiently powered, and intelligently connected.
+                To become the leading smart home and security solutions provider in the Philippines — a future where
+                every home and business benefits from intelligent automation, with security, sustainability, and
+                innovation built into modern living.
               </p>
             </div>
           </Reveal>

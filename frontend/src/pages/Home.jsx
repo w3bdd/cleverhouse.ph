@@ -50,8 +50,9 @@ const Home = () => {
             className="mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground"
             data-testid="hero-subtext"
           >
-            Smart home, security, solar, gate automation, and electrical engineering — designed for the coasts of
-            Aurora and the heart of Central Luzon. Installed properly. Supported locally.
+            Empowering smart living through innovative solutions — smart home, security, solar, gate automation,
+            and electrical engineering, designed for the coasts of Aurora and the heart of Central Luzon.
+            Installed properly. Supported locally.
           </motion.p>
 
           <motion.div

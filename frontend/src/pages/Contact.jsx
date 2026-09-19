@@ -72,8 +72,9 @@ const Contact = () => {
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/40 text-primary">
                   <MapPin size={20} />
                 </span>
-                <p className="mt-5 font-mono text-[10px] tracking-[0.35em] uppercase text-muted-foreground">Service area</p>
-                <p className="mt-2 font-display text-lg sm:text-xl font-bold tracking-tight">{CONTACT.region}</p>
+                <p className="mt-5 font-mono text-[10px] tracking-[0.35em] uppercase text-muted-foreground">Find us</p>
+                <p className="mt-2 font-display text-lg sm:text-xl font-bold tracking-tight">{CONTACT.address}</p>
+                <p className="mt-1.5 text-sm text-muted-foreground">Serving all of {CONTACT.region}</p>
               </div>
             </div>
           </Reveal>

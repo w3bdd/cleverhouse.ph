@@ -8,10 +8,11 @@ import {
 } from "lucide-react";
 
 export const CONTACT = {
-  phoneDisplay: "+63 965 093 3555",
-  phoneHref: "tel:+639650933555",
+  phoneDisplay: "+63 991 724 2377",
+  phoneHref: "tel:+639917242377",
   email: "contact.us@chphil.com",
   emailHref: "mailto:contact.us@chphil.com",
+  address: "San Luis, Aurora 3201, Philippines",
   region: "Aurora & Region 3, Central Luzon",
 };
 
@@ -30,7 +31,7 @@ export const SERVICES = [
     num: "01",
     title: "CCTV & Surveillance",
     description:
-      "High-definition smart cameras with remote phone monitoring and perimeter alerts — housed and sealed for coastal, typhoon-season conditions.",
+      "State-of-the-art CCTV systems tailored to your property's security needs — expert installation for maximum coverage, dependable recording, and round-the-clock peace of mind.",
     icon: ShieldCheck,
     image: IMAGES.cctv,
     tags: ["HD / 4K cameras", "Remote phone access", "Weatherproof housings"],
@@ -40,17 +41,17 @@ export const SERVICES = [
     num: "02",
     title: "Audio Systems",
     description:
-      "Multi-room acoustic planning, ceiling-integrated speakers, and weatherproof outdoor audio for homes, cafés, and commercial spaces.",
+      "Premium audio for homes and businesses — from home theaters to commercial sound setups, installed and tuned for optimal acoustic performance in every room.",
     icon: Volume2,
     image: IMAGES.audio,
-    tags: ["Multi-room zones", "Ceiling speakers", "Outdoor setups"],
+    tags: ["Home theaters", "Commercial sound", "Multi-room zones"],
   },
   {
     id: "solar",
     num: "03",
     title: "Solar Power Systems",
     description:
-      "On-grid, off-grid, and hybrid solar installations sized to your actual load — built to cut heavy electric bills across Region 3.",
+      "Solar power systems designed around your actual energy needs — a practical path to lower electricity bills and sustainable, renewable power for your property.",
     icon: Sun,
     image: IMAGES.solar,
     tags: ["On-grid / off-grid / hybrid", "Load sizing", "Generation monitoring"],
@@ -60,17 +61,17 @@ export const SERVICES = [
     num: "04",
     title: "Smart Home Devices",
     description:
-      "Centralized control for lighting scenes, climate, smart locks, and energy monitoring — configured around how your household actually lives.",
+      "Smart lighting, thermostats, security cameras, and voice-controlled assistants — installed and configured so the latest technology fades naturally into daily life.",
     icon: Cpu,
     image: IMAGES.smart,
-    tags: ["Lighting scenes", "Smart locks", "Energy monitoring"],
+    tags: ["Smart lighting", "Voice assistants", "Climate & locks"],
   },
   {
     id: "gates",
     num: "05",
     title: "Automated Gates",
     description:
-      "Custom steel and aluminum gate design and fabrication with heavy-duty motorization, keypad entry, and remote control.",
+      "Custom automated gates designed and fabricated to match your property's aesthetic — convenience, security, and elegance in a single installation.",
     icon: DoorClosed,
     image: IMAGES.house,
     tags: ["Custom fabrication", "Motorization", "Keypad & remote entry"],
@@ -80,10 +81,10 @@ export const SERVICES = [
     num: "06",
     title: "Electrical Wiring",
     description:
-      "Full-house rewiring, circuit breaker upgrades, load distribution, and surge protection — the foundation every smart system depends on.",
+      "Precision electrical wiring for new construction and renovation — safe, standards-conscious, and built to reliably carry everything else we install.",
     icon: Zap,
     image: IMAGES.hero,
-    tags: ["Full rewiring", "Breaker upgrades", "Surge protection"],
+    tags: ["New builds & renovation", "Breaker upgrades", "Surge protection"],
   },
 ];
 
@@ -136,20 +137,20 @@ export const PROCESS = [
 
 export const WHY_US = [
   {
-    title: "One team, whole system",
-    text: "Solar, wiring, security, and automation designed together — not patched together by four different contractors.",
+    title: "Skilled, current expertise",
+    text: "Our technicians and installers stay versed in the latest technologies and installation practices — and it shows in the finish of every job.",
   },
   {
-    title: "Built for coastal Aurora",
-    text: "Corrosion-resistant hardware, typhoon-aware mounting, and surge protection treated as standard, not upgrades.",
+    title: "Custom solutions, not packages",
+    text: "No two spaces are alike. Every system we design is tailored to your layout, your load, and how you actually live or work.",
   },
   {
-    title: "Straight answers",
-    text: "Written scopes, itemized quotes, honest timelines. We are a startup — we earn trust the slow way, on purpose.",
+    title: "Quality you can verify",
+    text: "We source high-quality products and materials chosen for durability and performance — the things we're happy to put in writing.",
   },
   {
-    title: "Local & reachable",
-    text: "Based in Aurora. The people who install your system are the same people who answer the phone.",
+    title: "Customer-centric, start to finish",
+    text: "We answer the phone after the install too. Service doesn't end when the tools are packed — we aim to exceed expectations, every time.",
   },
 ];
 
