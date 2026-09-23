@@ -31,7 +31,7 @@ export const Footer = () => (
             {SERVICES.map((s) => (
               <li key={s.id}>
                 <Link
-                  to="/services"
+                  to={`/services/${s.id}`}
                   data-testid={`footer-service-${s.id}`}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
                 >

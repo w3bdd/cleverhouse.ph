@@ -38,10 +38,11 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 - Hero: network sphere → rotating globe with real world-map dots (Natural Earth data baked into src/data/globePoints.js), Philippines archipelago highlighted amber, beacon removed on request
 - Contact person added: Alexander Galvan (Contact page call card + footer)
 - Services + Gallery: Automated Gates and Electrical Wiring images replaced with user's own enhanced brand illustrations (/public/images/automated-gates.jpg, /public/images/electrical-wiring.jpg) — cropped, color/sharpness-tuned, web-optimized
+- Service detail pages live at /services/:id (all 6): tagline, 2-paragraph overview, "What's included" feature list, prev/next navigation, consultation + call CTAs, per-page SEO title; home rows, services blocks, and footer links all point to them; invalid ids redirect to /services
 
 ## Backlog
 - P0: Replace gallery placeholders with real project photos; verify provisional safety/warranty copy against actual business terms
-- P1: Dedicated Quote Request page (backend `type` field already supports it); individual service detail pages; WhatsApp click-to-chat link
+- P1: Dedicated Quote Request page (backend `type` field already supports it); WhatsApp click-to-chat link
 - P2: Object Storage for gallery assets; Google Business Profile + local schema.org markup; analytics; admin view of inquiries
 
 ## Next Tasks

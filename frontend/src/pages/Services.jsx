@@ -53,7 +53,11 @@ const Services = () => {
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/40 text-primary">
                     <Icon size={22} />
                   </span>
-                  <h2 className="mt-5 font-display text-2xl sm:text-4xl font-bold tracking-tight">{s.title}</h2>
+                  <Link to={`/services/${s.id}`} data-testid={`service-link-${s.id}`} className="group/title">
+                    <h2 className="mt-5 font-display text-2xl sm:text-4xl font-bold tracking-tight group-hover/title:text-primary transition-colors duration-300">
+                      {s.title}
+                    </h2>
+                  </Link>
                   <p className="mt-4 text-base sm:text-lg leading-relaxed text-muted-foreground max-w-xl">
                     {s.description}
                   </p>
@@ -67,6 +71,13 @@ const Services = () => {
                       </span>
                     ))}
                   </div>
+                  <Link
+                    to={`/services/${s.id}`}
+                    data-testid={`service-explore-${s.id}`}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all duration-300"
+                  >
+                    Explore this service <ArrowUpRight size={16} />
+                  </Link>
                 </div>
               </div>
             </Reveal>

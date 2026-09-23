@@ -123,7 +123,7 @@ const Home = () => {
           {SERVICES.map((s, i) => (
             <Reveal key={s.id} delay={i * 0.05}>
               <Link
-                to="/services"
+                to={`/services/${s.id}`}
                 data-testid={`home-service-row-${s.id}`}
                 className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 sm:gap-8 py-6 sm:py-8 border-b border-border hover:bg-secondary/40 transition-colors duration-300 px-2 sm:px-4"
               >

@@ -89,6 +89,99 @@ export const SERVICES = [
   },
 ];
 
+export const SERVICE_DETAILS = {
+  cctv: {
+    tagline: "See everything. From anywhere.",
+    overview: [
+      "We design CCTV systems around your property — camera positions, sightlines, recording, and remote access are all planned before a single hole is drilled. No generic packages, no blind spots.",
+      "Every camera is sealed in weatherproof, corrosion-resistant housings and mounted for coastal, typhoon-season conditions. Once installed, we configure remote viewing on your phone and walk you through playback and alerts before we leave.",
+    ],
+    features: [
+      "Site survey & camera placement plan",
+      "HD / 4K cameras with night vision",
+      "Weatherproof, corrosion-resistant housings",
+      "Remote viewing on your phone",
+      "Local recording with easy playback",
+      "Motion & perimeter alerts",
+    ],
+  },
+  audio: {
+    tagline: "Sound that fills the space — beautifully.",
+    overview: [
+      "Great audio is planned, not just plugged in. We map speaker placement, zones, and acoustics to the room — whether it's a home theater, a whole-house system, or background music for your café or shop.",
+      "Installations are clean: concealed cabling, flush-mounted speakers where possible, and a system tuned to the space so it sounds right from day one.",
+    ],
+    features: [
+      "Home theater design & installation",
+      "Multi-room / multi-zone audio",
+      "Ceiling & in-wall speakers",
+      "Weatherproof outdoor audio",
+      "Commercial background music & paging",
+      "System calibration & tuning",
+    ],
+  },
+  solar: {
+    tagline: "Your roof, working for you.",
+    overview: [
+      "We start with your actual consumption — not a guess. Your system is sized from your real load profile, then designed on-grid, off-grid, or hybrid depending on how you use power and how reliable the local supply is.",
+      "Mounting is engineered for typhoon season, generation monitoring goes on your phone, and we guide you through the paperwork, including net metering where it applies.",
+    ],
+    features: [
+      "Load assessment & system sizing",
+      "On-grid, off-grid & hybrid designs",
+      "Typhoon-rated roof mounting",
+      "Inverter & battery configuration",
+      "Generation monitoring on your phone",
+      "Net metering guidance",
+    ],
+  },
+  "smart-home": {
+    tagline: "One home. One tap.",
+    overview: [
+      "Smart lighting, locks, climate, cameras, and voice assistants — installed and configured as one system, not five apps that don't talk to each other.",
+      "We set everything up around how your household actually lives: scenes for mornings and evenings, automations that make sense, and a walkthrough so everyone at home can use it.",
+    ],
+    features: [
+      "Smart lighting scenes",
+      "Smart locks & door sensors",
+      "Climate & thermostat control",
+      "Voice assistant setup",
+      "Energy monitoring",
+      "Unified app configuration",
+    ],
+  },
+  gates: {
+    tagline: "Arrive. Tap. Drive in.",
+    overview: [
+      "We design and fabricate custom steel and aluminum gates in-house, then motorize them to match — swing gates for driveway entrances, sliding gates where space is tight, and sectional garage doors for everyday convenience.",
+      "Every installation includes keypad, remote, and app entry options, plus safety sensors and a manual override so a power outage never locks you in or out.",
+    ],
+    features: [
+      "Swing gate automation",
+      "Sliding gate automation",
+      "Sectional garage door automation",
+      "Custom steel & aluminum fabrication",
+      "Keypad, remote & app entry",
+      "Safety sensors & manual override",
+    ],
+  },
+  wiring: {
+    tagline: "The foundation everything else depends on.",
+    overview: [
+      "Every smart system, solar array, and automated gate is only as good as the wiring beneath it. We handle electrical work for new construction and renovation — neatly, safely, and to standard.",
+      "From breaker panel upgrades and surge protection to complete rewiring and load distribution planning, everything is tested and documented before handover.",
+    ],
+    features: [
+      "New construction wiring",
+      "Renovation & full rewiring",
+      "Breaker panel upgrades",
+      "Whole-property surge protection",
+      "Lighting & outlet installation",
+      "Load distribution planning",
+    ],
+  },
+};
+
 export const CHAPTERS = [
   {
     chapter: "01",
