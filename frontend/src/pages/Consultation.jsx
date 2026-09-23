@@ -31,7 +31,11 @@ const Consultation = () => {
       toast.success("Consultation request received. We'll call you within one business day.");
     } catch (err) {
       const detail = err?.response?.data?.detail;
-      toast.error(typeof detail === "string" ? detail : "Something went wrong. Please call us instead.");
+      toast.error(
+        typeof detail === "string"
+          ? detail
+          : `Couldn't send automatically — please call ${CONTACT.phoneDisplay} or email ${CONTACT.email}.`
+      );
     } finally {
       setLoading(false);
     }

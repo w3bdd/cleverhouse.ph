@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route, useLocation } from "react-router-dom";
+
+const Router = process.env.REACT_APP_GH_PAGES === "true" ? HashRouter : BrowserRouter;
 import Lenis from "lenis";
 import { Toaster } from "sonner";
 import { ThemeProvider, useTheme } from "@/context/ThemeContext";
@@ -65,9 +67,9 @@ function App() {
 
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <Router>
         <Layout />
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   );
 }
