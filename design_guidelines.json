@@ -1,147 +1,72 @@
 {
-  "brand": {
-    "name": "Cleverhouse Philippines",
-    "tagline": "Smart Living, Security, Energy & Electrical Infrastructure for Aurora & Region 3",
-    "region": "Aurora & Central Luzon (Region 3), Philippines",
-    "tone": "Modern but human, technical, safe, highly dependable, zero-fluff startup transparency"
-  },
-  "visual_system": {
-    "default_mode": "light",
-    "theme_toggle": true,
-    "light_mode": {
-      "background": "#F8FAFC",
-      "surface": "#FFFFFF",
-      "surface_elevated": "#F1F5F9",
-      "text_primary": "#0F172A",
-      "text_secondary": "#475569",
-      "text_muted": "#64748B",
-      "border": "#E2E8F0",
-      "accent_primary": "#0284C7",
-      "accent_glow": "rgba(2, 132, 199, 0.15)",
-      "gradient_hero": "linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #F0F9FF 100%)"
-    },
-    "dark_mode": {
-      "background": "#090D16",
-      "surface": "#0F172A",
-      "surface_elevated": "#1E293B",
-      "text_primary": "#F8FAFC",
-      "text_secondary": "#94A3B8",
-      "text_muted": "#64748B",
-      "border": "#1E293B",
-      "accent_primary": "#38BDF8",
-      "accent_glow": "rgba(56, 189, 248, 0.2)",
-      "gradient_hero": "linear-gradient(135deg, #090D16 0%, #0F172A 60%, #0369A1 100%)"
-    }
-  },
+  "project_type": "marketing_site",
+  "brand_name": "Cleverhouse Philippines",
+  "location": "Aurora, Philippines",
+  "theme": "Light / High Contrast Tech Precision",
   "typography": {
-    "heading_font": "Cabinet Grotesk, Outfit, sans-serif",
-    "body_font": "Plus Jakarta Sans, Inter, sans-serif",
-    "mono_font": "JetBrains Mono, monospace",
+    "heading_font": "Cabinet Grotesk / Clash Display / Outfit",
+    "body_font": "IBM Plex Sans / Inter",
+    "mono_font": "JetBrains Mono",
     "hierarchy": {
-      "h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight",
-      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
-      "h3": "text-xl sm:text-2xl font-semibold",
-      "body": "text-base sm:text-lg leading-relaxed",
-      "caption": "text-xs sm:text-sm font-mono tracking-widest uppercase"
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base text-slate-700 leading-relaxed",
+      "label": "text-xs uppercase tracking-widest text-slate-500 font-mono"
     }
   },
-  "motion_and_effects": {
-    "libraries": [
-      "framer-motion",
-      "@studio-freight/lenis",
-      "three",
-      "@react-three/fiber",
-      "@react-three/drei",
-      "lucide-react",
-      "sonner"
-    ],
-    "hero_reveal": "Masked line-by-line stagger animation with Y displacement (translateY: 100% to 0%)",
-    "smooth_scroll": "Lenis smooth scrolling with momentum momentum weight factor 1.2",
-    "hero_3d": "Interactive Three.js ambient node/energy flow sphere in Canvas hero overlay",
-    "editorial_marquee": "Slow 30s continuous loop marquee with tropical grey background and low contrast metallic text"
+  "colors": {
+    "archetype": "SWISS & HIGH-CONTRAST / TECHNICAL PRECISION",
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "primary": "#0F172A",
+    "primary_accent": "#0284C7",
+    "secondary_accent": "#D97706",
+    "border": "#E2E8F0",
+    "text_dark": "#0F172A",
+    "text_muted": "#64748B",
+    "gradient_hero_overlay": "bg-gradient-to-r from-slate-900/80 via-slate-900/50 to-transparent",
+    "rule": "Never use pure #000000 or full transparent headers. Use glassmorphism backdrop-blur-md bg-white/80 or bg-slate-900/90."
   },
-  "services": [
-    {
-      "id": "cctv",
-      "title": "CCTV & AI Surveillance",
-      "description": "24/7 high-definition smart cameras with remote phone monitoring and perimeter breach alerts tuned for tropical weather.",
-      "icon": "ShieldCheck",
-      "image": "https://images.pexels.com/photos/31970049/pexels-photo-31970049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    },
-    {
-      "id": "audio",
-      "title": "Architectural Audio Systems",
-      "description": "Multi-room acoustic engineering, ceiling integrated soundbars, and weatherproof outdoor patio speaker setups.",
-      "icon": "Volume2",
-      "image": "https://images.unsplash.com/photo-1772475385327-ae6212f900aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxzbWFydCUyMGhvbWUlMjBjb250cm9sJTIwaW50ZXJpb3IlMjBzb3VuZCUyMHN5c3RlbXxlbnwwfHx8fDE3ODk3ODA0NTd8MA&ixlib=rb-4.1.0&q=85"
-    },
-    {
-      "id": "solar",
-      "title": "Solar Panel Power Systems",
-      "description": "On-grid, off-grid, and hybrid solar installations designed to eliminate heavy electric bills in Region 3.",
-      "icon": "Sun",
-      "image": "https://images.pexels.com/photos/9875418/pexels-photo-9875418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    },
-    {
-      "id": "smart-home",
-      "title": "Smart Home Automation",
-      "description": "Centralized tablet and voice controls for lighting scenes, climate control, smart locks, and energy monitoring.",
-      "icon": "Cpu",
-      "image": "https://images.pexels.com/photos/34241691/pexels-photo-34241691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    },
-    {
-      "id": "automated-gates",
-      "title": "Automated Gate Design & Fabrication",
-      "description": "Custom steel and aluminum gate fabrication with heavy-duty motorization, keypad entry, and remote control.",
-      "icon": "DoorClosed",
-      "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsdXh1cnklMjBob3VzZSUyMGV4dGVyaW9yJTIwZHVzayUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4OTc4MDQ1N3ww&ixlib=rb-4.1.0&q=85"
-    },
-    {
-      "id": "electrical-wiring",
-      "title": "Electrical Wiring & Load Distribution",
-      "description": "Master-engineered full house rewiring, circuit breaker upgrades, surge protection, and safety certifications.",
-      "icon": "Zap",
-      "image": "https://images.unsplash.com/photo-1748063578185-3d68121b11ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBob3VzZSUyMGV4dGVyaW9yJTIwZHVzayUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4OTc4MDQ1N3ww&ixlib=rb-4.1.0&q=85"
-    }
-  ],
   "image_urls": {
-    "hero_bg": "https://images.unsplash.com/photo-1748063578185-3d68121b11ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBob3VzZSUyMGV4dGVyaW9yJTIwZHVzayUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4OTc4MDQ1N3ww&ixlib=rb-4.1.0&q=85",
-    "solar_roof": "https://images.pexels.com/photos/9875418/pexels-photo-9875418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "cctv_camera": "https://images.pexels.com/photos/31970049/pexels-photo-31970049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "smart_interior": "https://images.pexels.com/photos/34241691/pexels-photo-34241691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "modern_house": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsdXh1cnklMjBob3VzZSUyMGV4dGVyaW9yJTIwZHVzayUyMGxpZ2h0aW5nfGVufDB8fHx8MTc4OTc4MDQ1N3ww&ixlib=rb-4.1.0&q=85",
-    "audio_setup": "https://images.unsplash.com/photo-1772475385327-ae6212f900aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxzbWFydCUyMGhvbWUlMjBjb250cm9sJTIwaW50ZXJpb3IlMjBzb3VuZCUyMHN5c3RlbXxlbnwwfHx8fDE3ODk3ODA0NTd8MA&ixlib=rb-4.1.0&q=85"
-  },
-  "manifesto_chapters": [
-    {
-      "chapter": "01",
-      "title": "The Aurora Standard",
-      "summary": "Coastal conditions and typhoon climates demand higher engineering thresholds.",
-      "content": "We build electrical and security infrastructure specifically designed for the heat, humidity, and coastal weather of Aurora province and Central Luzon. No cheap consumer parts—only industrial-grade cabling, IP67 housings, and surge-protected breakers."
+    "automated_gates": {
+      "category": "Automated Gates & Entrance Systems",
+      "description": "Architectural and technical drawing / schematic illustrations of driveway gates and entrance automation",
+      "primary_card_url": "https://images.unsplash.com/photo-1717241365364-fb13b87595c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5NDQ2MzR8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aWMlMjBkcml2ZXdheSUyMGdhdGUlMjBpbGx1c3RyYXRpb24lMjBkaWFncmFtfGVufDB8fHx8MTc5MDE3NDI5Nnww&ixlib=rb-4.1.0&q=85",
+      "hero_wide_url": "https://images.unsplash.com/photo-1717241365364-fb13b87595c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5NDQ2MzR8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aWMlMjBkcml2ZXdheSUyMGdhdGUlMjBpbGx1c3RyYXRpb24lMjBkaWFncmFtfGVufDB8fHx8MTc5MDE3NDI5Nnww&ixlib=rb-4.1.0&q=85",
+      "alternate_urls": [
+        "https://images.unsplash.com/photo-1686668099036-99eb36885f91?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHw0fHxhdXRvbWF0aWMlMjBkcml2ZXdheSUyMGdhdGUlMjBpbGx1c3RyYXRpb24lMjBkaWFncmFtfGVufDB8fHx8MTc5MDE3NDI5Nnww&ixlib=rb-4.1.0&q=85",
+        "https://images.unsplash.com/photo-1712696779652-dfca8766c5f8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxnYXRlJTIwbW90b3IlMjBkcmF3aW5nJTIwYXJjaGl0ZWN0dXJlJTIwYmx1ZXByaW50fGVufDB8fHx8MTc5MDE3NDMwMnww&ixlib=rb-4.1.0&q=85"
+      ]
     },
-    {
-      "chapter": "02",
-      "title": "Honest Startup Transparency",
-      "summary": "No fake badges, no overstated certifications. Real work with guaranteed service.",
-      "content": "We don't claim decades of fake enterprise history. We are a dedicated team of certified local technicians, electrical engineers, and smart system specialists committed to doing the job right the first time with prompt post-installation support."
-    },
-    {
-      "chapter": "03",
-      "title": "Unified Infrastructure",
-      "summary": "Power, Protection, and Intelligence working in total alignment.",
-      "content": "A smart home without clean power is fragile; a solar setup without load monitoring is inefficient. Cleverhouse unifies solar energy, heavy electrical wiring, automated gates, and smart home automation into one cohesive, effortless system."
+    "electrical_wiring": {
+      "category": "Electrical Wiring & Panel Installation",
+      "description": "Technical schematic, wiring blueprint, and electrical panel cutaway illustrations",
+      "primary_card_url": "https://images.unsplash.com/photo-1713557112617-e12d67bddc3a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxlbGVjdHJpY2FsJTIwd2lyaW5nJTIwYmx1ZXByaW50JTIwaWxsdXN0cmF0aW9uJTIwc2NoZW1hdGljfGVufDB8fHx8MTc5MDE3NDI5Nnww&ixlib=rb-4.1.0&q=85",
+      "hero_wide_url": "https://images.unsplash.com/photo-1571666521805-f5e8423aba9d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwd2lyaW5nJTIwYmx1ZXByaW50JTIwaWxsdXN0cmF0aW9uJTIwc2NoZW1hdGljfGVufDB8fHx8MTc5MDE3NDI5Nnww&ixlib=rb-4.1.0&q=85",
+      "alternate_urls": [
+        "https://images.pexels.com/photos/4458200/pexels-photo-4458200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.unsplash.com/photo-1535139893822-3dbb05622f7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHw3fHxjaXJjdWl0JTIwZGlhZ3JhbSUyMHNjaGVtYXRpYyUyMGlsbHVzdHJhdGlvbnxlbnwwfHx8fDE3OTAxNzQzMDJ8MA&ixlib=rb-4.1.0&q=85"
+      ]
     }
-  ],
-  "sticky_mobile_cta": {
-    "enabled": true,
-    "phone_primary": "+63 917 555 0198",
-    "call_label": "Call Now (Aurora/Region 3)",
-    "consult_label": "Request Consultation"
   },
-  "instructions_to_main_agent": {
-    "file_structure": "Use React js components (.js or .jsx) in /app/frontend/src/.",
-    "seo_keywords": "Cleverhouse Philippines, Smart Home Aurora, CCTV installation Baler Aurora, Solar power Central Luzon, Automated Gate fabrication Region 3, Electrical wiring contractor Baler",
-    "data_testids": "Ensure all buttons, inputs, links, forms, and cards have kebab-case data-testid attributes (e.g. data-testid='cta-call-button', data-testid='consultation-submit-button', data-testid='theme-toggle-button').",
-    "cta_priority": "Mobile: Call CTA dominates sticky bar and hero. Desktop/lower-scroll: Consultation request form CTA wins."
-  }
+  "layout_and_spacing": {
+    "grid": "Base grid md:grid-cols-2 lg:grid-cols-3 with gap-8 or gap-12",
+    "card_aspect_ratio": "roughly 600x460px (aspect ratio 4:3 / 16:10) for service card grid",
+    "hero_aspect_ratio": "1200x460px landscape orientation for detailed service view",
+    "padding": "Generous internal padding p-6 or p-8 inside bordered cards",
+    "max_image_mobile_height": "max-h-[80vh] md:max-h-none"
+  },
+  "visual_enhancers": {
+    "borders": "1px solid slate-200 with subtle hover shadow transition",
+    "glassmorphism": "backdrop-blur-xl bg-white/80 border border-slate-200/60 for navigation & floating bars",
+    "textures": "Technical grid lines or light architectural noise overlays"
+  },
+  "testing_and_accessibility": {
+    "data_testid": "Mandatory data-testid on all interactive buttons, card containers, and image elements (e.g. data-testid=\"automated-gates-service-card\", data-testid=\"electrical-wiring-service-image\")",
+    "contrast": "APCA/WCAG AA compliant contrast ratio (> 4.5:1 for body text, > 3:1 for headers and buttons)",
+    "prefers_reduced_motion": "Honor prefers-reduced-motion in Framer Motion / CSS transitions"
+  },
+  "instructions_to_main_agent": "1. Replace AI-generated service card and hero images for Automated Gates and Electrical Wiring with the curated technical drawing / illustration style URLs provided in `image_urls`.\n2. Ensure image wrappers preserve landscape aspect ratio (600x460px for card view, 1200x460px for detail/hero view) with proper rounded borders (`rounded-xl` or `rounded-2xl`) and shadow transitions.\n3. Verify all interactive components have appropriate `data-testid` attributes in JS format.\n4. Avoid complete transparent headers or generic stock photos; retain technical precision branding for Cleverhouse Philippines."
 }

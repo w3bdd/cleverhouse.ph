@@ -41,12 +41,6 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 - Service detail pages live at /services/:id (all 6): tagline, 2-paragraph overview, "What's included" feature list, prev/next navigation, consultation + call CTAs, per-page SEO title; home rows, services blocks, and footer links all point to them; invalid ids redirect to /services
 
 ## Deployment readiness (v4)
-- GitHub Pages: static build verified (`REACT_APP_GH_PAGES=true` → HashRouter + relative asset paths via `homepage: "."`), workflow at `.github/workflows/gh-pages.yml` (set `REACT_APP_BACKEND_URL` repo variable to keep the form live)
-- VPS: `docker-compose.yml` (mongo + backend + frontend/nginx), Dockerfiles in backend/ and frontend/, nginx proxies `/api` to FastAPI, `.env.example` files, full guide in `/app/DEPLOYMENT.md`
-- `requirements.txt` minimized to actual runtime deps (removed platform-only packages that would break VPS installs)
-- Consultation form degrades gracefully on static hosting (error toast shows phone/email fallback)
-
-## Backlog
 - P0: Replace gallery placeholders with real project photos; verify provisional safety/warranty copy against actual business terms
 - P1: Dedicated Quote Request page (backend `type` field already supports it); WhatsApp click-to-chat link
 - P2: Object Storage for gallery assets; Google Business Profile + local schema.org markup; analytics; admin view of inquiries
