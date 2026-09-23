@@ -12,8 +12,8 @@ import electricalWiringImg from "../assets/electrical-wiring.jpg";
 export const CONTACT = {
   phoneDisplay: "+63 991 724 2377",
   phoneHref: "tel:+639917242377",
-  email: "contact.us@chphil.com",
-  emailHref: "mailto:contact.us@chphil.com",
+  email: "contactus.cleverhouse@gmail.com",
+  emailHref: "mailto:contactus.cleverhouse@gmail.com",
   address: "San Luis, Aurora 3201, Philippines",
   region: "Aurora & Region 3, Central Luzon",
   person: "Alexander Galvan",
