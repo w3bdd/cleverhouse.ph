@@ -74,7 +74,7 @@ export const SERVICES = [
     description:
       "Custom automated gates designed and fabricated to match your property's aesthetic — convenience, security, and elegance in a single installation.",
     icon: DoorClosed,
-    image: IMAGES.house,
+    image: "/images/automated-gates.jpg",
     tags: ["Custom fabrication", "Motorization", "Keypad & remote entry"],
   },
   {
@@ -84,7 +84,7 @@ export const SERVICES = [
     description:
       "Precision electrical wiring for new construction and renovation — safe, standards-conscious, and built to reliably carry everything else we install.",
     icon: Zap,
-    image: IMAGES.hero,
+    image: "/images/electrical-wiring.jpg",
     tags: ["New builds & renovation", "Breaker upgrades", "Surge protection"],
   },
 ];
@@ -181,8 +181,8 @@ export const GALLERY = [
   { id: "g2", image: IMAGES.solar, label: "Solar Power Systems", note: "Placeholder — project photo coming soon" },
   { id: "g3", image: IMAGES.smart, label: "Smart Home Automation", note: "Placeholder — project photo coming soon" },
   { id: "g4", image: IMAGES.audio, label: "Audio Systems", note: "Placeholder — project photo coming soon" },
-  { id: "g5", image: IMAGES.house, label: "Automated Gates", note: "Placeholder — project photo coming soon" },
-  { id: "g6", image: IMAGES.hero, label: "Electrical Wiring", note: "Placeholder — project photo coming soon" },
+  { id: "g5", image: "/images/automated-gates.jpg", label: "Automated Gates", note: "Service illustration — project photos coming soon" },
+  { id: "g6", image: "/images/electrical-wiring.jpg", label: "Electrical Wiring", note: "Service illustration — project photos coming soon" },
 ];
 
 export const SERVICE_OPTIONS = [

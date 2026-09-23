@@ -34,6 +34,11 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 - Tagline "Empowering Smart Living Through Innovative Solutions" now drives the About hero
 - Services descriptions, Why-Choose-Us points, About story, Mission and Vision replaced with improved versions of the official company copy
 
+## Revisions (v3)
+- Hero: network sphere → rotating globe with real world-map dots (Natural Earth data baked into src/data/globePoints.js), Philippines archipelago highlighted amber, beacon removed on request
+- Contact person added: Alexander Galvan (Contact page call card + footer)
+- Services + Gallery: Automated Gates and Electrical Wiring images replaced with user's own enhanced brand illustrations (/public/images/automated-gates.jpg, /public/images/electrical-wiring.jpg) — cropped, color/sharpness-tuned, web-optimized
+
 ## Backlog
 - P0: Replace gallery placeholders with real project photos; verify provisional safety/warranty copy against actual business terms
 - P1: Dedicated Quote Request page (backend `type` field already supports it); individual service detail pages; WhatsApp click-to-chat link

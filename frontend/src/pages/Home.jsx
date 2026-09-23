@@ -7,7 +7,7 @@ import { Reveal } from "../components/Reveal";
 import { Marquee } from "../components/Marquee";
 import { HeroSphere } from "../components/HeroSphere";
 import { useTheme } from "../context/ThemeContext";
-import { SERVICES, PROCESS, WHY_US, MUNICIPALITIES, GALLERY, CONTACT } from "../data/content";
+import { SERVICES, PROCESS, WHY_US, MUNICIPALITIES, GALLERY, CONTACT, IMAGES } from "../data/content";
 
 const Home = () => {
   const { theme } = useTheme();
@@ -174,7 +174,7 @@ const Home = () => {
           <Reveal delay={0.15}>
             <div className="clip-frame relative">
               <img
-                src={GALLERY[4].image}
+                src={IMAGES.house}
                 alt="Modern home exterior at dusk in Aurora"
                 className="w-full h-[320px] sm:h-[440px] object-cover"
                 loading="lazy"
