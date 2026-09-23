@@ -43,6 +43,9 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 ## Revisions (v5)
 - Automated Gates + Electrical Wiring images regenerated as photorealistic renders (Gemini Nano Banana via universal key, tropical PH settings). Illustrated versions backed up at /app/scripts/illustration_*.jpg; generation scripts in /app/scripts/.
 
+## Bugfix (v6)
+- GitHub Pages dead images: gates/wiring images were in public/ referenced as absolute "/images/..." which 404s under the Pages subpath. Moved to src/assets/ and imported as bundled modules (hashed, path-safe URLs). Verified by serving the GH Pages build from a /repo/ subpath with hash routing — both images load; preview (root path) also confirmed.
+
 ## Deployment readiness (v4)
 - P0: Replace gallery placeholders with real project photos; verify provisional safety/warranty copy against actual business terms
 - P1: Dedicated Quote Request page (backend `type` field already supports it); WhatsApp click-to-chat link

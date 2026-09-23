@@ -6,6 +6,8 @@ import {
   DoorClosed,
   Zap,
 } from "lucide-react";
+import automatedGatesImg from "../assets/automated-gates.jpg";
+import electricalWiringImg from "../assets/electrical-wiring.jpg";
 
 export const CONTACT = {
   phoneDisplay: "+63 991 724 2377",
@@ -74,7 +76,7 @@ export const SERVICES = [
     description:
       "Custom automated gates designed and fabricated to match your property's aesthetic — convenience, security, and elegance in a single installation.",
     icon: DoorClosed,
-    image: "/images/automated-gates.jpg",
+    image: automatedGatesImg,
     tags: ["Custom fabrication", "Motorization", "Keypad & remote entry"],
   },
   {
@@ -84,7 +86,7 @@ export const SERVICES = [
     description:
       "Precision electrical wiring for new construction and renovation — safe, standards-conscious, and built to reliably carry everything else we install.",
     icon: Zap,
-    image: "/images/electrical-wiring.jpg",
+    image: electricalWiringImg,
     tags: ["New builds & renovation", "Breaker upgrades", "Surge protection"],
   },
 ];
@@ -274,8 +276,8 @@ export const GALLERY = [
   { id: "g2", image: IMAGES.solar, label: "Solar Power Systems", note: "Placeholder — project photo coming soon" },
   { id: "g3", image: IMAGES.smart, label: "Smart Home Automation", note: "Placeholder — project photo coming soon" },
   { id: "g4", image: IMAGES.audio, label: "Audio Systems", note: "Placeholder — project photo coming soon" },
-  { id: "g5", image: "/images/automated-gates.jpg", label: "Automated Gates", note: "Service illustration — project photos coming soon" },
-  { id: "g6", image: "/images/electrical-wiring.jpg", label: "Electrical Wiring", note: "Service illustration — project photos coming soon" },
+  { id: "g5", image: automatedGatesImg, label: "Automated Gates", note: "Service illustration — project photos coming soon" },
+  { id: "g6", image: electricalWiringImg, label: "Electrical Wiring", note: "Service illustration — project photos coming soon" },
 ];
 
 export const SERVICE_OPTIONS = [
