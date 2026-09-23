@@ -40,6 +40,9 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 - Services + Gallery: Automated Gates and Electrical Wiring images replaced with user's own enhanced brand illustrations (/public/images/automated-gates.jpg, /public/images/electrical-wiring.jpg) — cropped, color/sharpness-tuned, web-optimized
 - Service detail pages live at /services/:id (all 6): tagline, 2-paragraph overview, "What's included" feature list, prev/next navigation, consultation + call CTAs, per-page SEO title; home rows, services blocks, and footer links all point to them; invalid ids redirect to /services
 
+## Revisions (v5)
+- Automated Gates + Electrical Wiring images regenerated as photorealistic renders (Gemini Nano Banana via universal key, tropical PH settings). Illustrated versions backed up at /app/scripts/illustration_*.jpg; generation scripts in /app/scripts/.
+
 ## Deployment readiness (v4)
 - P0: Replace gallery placeholders with real project photos; verify provisional safety/warranty copy against actual business terms
 - P1: Dedicated Quote Request page (backend `type` field already supports it); WhatsApp click-to-chat link
