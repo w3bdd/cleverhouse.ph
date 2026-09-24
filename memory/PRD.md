@@ -43,6 +43,9 @@ Credibility-first company website for Cleverhouse Philippines (smart living, sec
 ## Revisions (v5)
 - Automated Gates + Electrical Wiring images regenerated as photorealistic renders (Gemini Nano Banana via universal key, tropical PH settings). Illustrated versions backed up at /app/scripts/illustration_*.jpg; generation scripts in /app/scripts/.
 
+## Bugfix (v7)
+- GitHub Pages form failure: static hosting has no backend, POST fails. Consultation form now falls back to a pre-filled "Send via Email" (mailto to contactus.cleverhouse@gmail.com with all entered details) + call button whenever the server is unreachable or returns a non-API error. Verified on simulated Pages subpath build (fallback shown, mailto pre-filled) and regression-checked on preview (direct submission still succeeds). Note: no testing_agent tool exists in this environment; verification was done via faithful local GH Pages simulation.
+
 ## Bugfix (v6)
 - GitHub Pages dead images: gates/wiring images were in public/ referenced as absolute "/images/..." which 404s under the Pages subpath. Moved to src/assets/ and imported as bundled modules (hashed, path-safe URLs). Verified by serving the GH Pages build from a /repo/ subpath with hash routing — both images load; preview (root path) also confirmed.
 

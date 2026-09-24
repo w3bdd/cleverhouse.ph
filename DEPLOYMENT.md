@@ -7,8 +7,11 @@ The site has two deployment paths. Pick one.
 ## Option A — GitHub Pages (static site, free hosting)
 
 GitHub Pages serves only static files, so this path deploys the React frontend alone.
-The consultation form will still render, but it needs a live backend URL to actually
-send — otherwise visitors see a friendly "call us instead" message.
+The consultation form works like this there: if the backend can't be reached, it
+automatically offers a "Send via Email" button that opens the visitor's mail app with
+all their details pre-filled to contactus.cleverhouse@gmail.com, plus a call button.
+To make the form deliver directly instead, host the backend (Option B) and set the
+`REACT_APP_BACKEND_URL` repo variable so the Pages build points at it.
 
 Steps:
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { Phone, Send, Loader2, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, Send, Loader2, CheckCircle2 } from "lucide-react";
 import { MaskedLines } from "../components/MaskedLines";
 import { Reveal } from "../components/Reveal";
 import { CONTACT, SERVICE_OPTIONS } from "../data/content";
@@ -14,12 +14,27 @@ const Consultation = () => {
   const [form, setForm] = useState(INITIAL);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [fallback, setFallback] = useState(false);
 
   useEffect(() => {
     document.title = "Request a Consultation | Cleverhouse Philippines";
   }, []);
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
+
+  const mailtoHref = () => {
+    const subject = `Consultation request — ${form.full_name || "Website visitor"}`;
+    const body = [
+      `Name: ${form.full_name}`,
+      `Email: ${form.email}`,
+      `Contact number: ${form.phone}`,
+      `Service of interest: ${form.service || "Not specified"}`,
+      "",
+      "Message:",
+      form.message || "—",
+    ].join("\n");
+    return `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   const submit = async (e) => {
     e.preventDefault();
@@ -31,11 +46,11 @@ const Consultation = () => {
       toast.success("Consultation request received. We'll call you within one business day.");
     } catch (err) {
       const detail = err?.response?.data?.detail;
-      toast.error(
-        typeof detail === "string"
-          ? detail
-          : `Couldn't send automatically — please call ${CONTACT.phoneDisplay} or email ${CONTACT.email}.`
-      );
+      if (typeof detail === "string") {
+        toast.error(detail);
+      } else {
+        setFallback(true);
+      }
     } finally {
       setLoading(false);
     }
@@ -92,6 +107,38 @@ const Consultation = () => {
                     className="mt-8 text-sm font-semibold text-primary hover:underline"
                   >
                     Submit another request
+                  </button>
+                </div>
+              ) : fallback ? (
+                <div className="relative py-8 text-center" data-testid="consultation-email-fallback">
+                  <Mail size={44} className="mx-auto text-primary" />
+                  <h2 className="mt-6 font-display text-2xl sm:text-3xl font-bold tracking-tight">
+                    Our server is out of reach.
+                  </h2>
+                  <p className="mx-auto mt-4 max-w-sm text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    No worries — your details are still here. Send them straight to us by email, or call and we'll
+                    take it from there.
+                  </p>
+                  <a
+                    href={mailtoHref()}
+                    data-testid="consultation-mailto-button"
+                    className="mt-8 w-full inline-flex items-center justify-center gap-2.5 h-14 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity duration-300"
+                  >
+                    <Mail size={17} /> Send via Email — {CONTACT.email}
+                  </a>
+                  <a
+                    href={CONTACT.phoneHref}
+                    data-testid="consultation-fallback-call"
+                    className="mt-3 w-full inline-flex items-center justify-center gap-2.5 h-14 rounded-full border border-border font-semibold hover:border-primary/60 hover:text-primary transition-colors duration-300"
+                  >
+                    <Phone size={17} /> Call {CONTACT.phoneDisplay}
+                  </a>
+                  <button
+                    onClick={() => setFallback(false)}
+                    data-testid="consultation-retry-button"
+                    className="mt-6 text-sm font-semibold text-primary hover:underline"
+                  >
+                    Back to the form
                   </button>
                 </div>
               ) : (
